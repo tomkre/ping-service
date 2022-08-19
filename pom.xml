@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<docker.image.prefix>ostock</docker.image.prefix>
+		<docker.image.version>${project.version}</docker.image.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,7 +58,7 @@
 				<version>1.4.13</version>
 				<configuration>
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
-					<tag>${project.version}</tag>
+					<tag>${docker.image.version}</tag>
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
