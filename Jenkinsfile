@@ -26,7 +26,7 @@ node {
         }
     }
     stage('Kubernetes deploy') {
-        kubernetesDeploy
+        kubernetesDeploy(
             configs: 'ping-service-deployment.yaml',
             kubeConfig: [path: ''],
             kubeconfigId: 'kubeconfig',
@@ -41,5 +41,6 @@ node {
                 clientKeyData: '',
                 serverUrl: 'https://'
             ]
+        )
     }
 }
