@@ -22,7 +22,7 @@ node {
     }
     stage('Push image') {
         docker.withRegistry('https://665971472586.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:ecr-user') {
-            sh "docker image push 665971472586.dkr.ecr.us-east-1.amazonaws.com/ostock/ping-service:latest"
+            sh "docker image push 665971472586.dkr.ecr.us-east-1.amazonaws.com/ostock/ping-service:chapter12"
         }
     }
     stage('Kubernetes deploy') {
