@@ -18,7 +18,7 @@ public class PingController {
     public JsonNode ping() {
         return objectMapper
             .createObjectNode()
-            .put("status", "OK v3");
+            .put("status", "OK v4");
     }
 
 }
