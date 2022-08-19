@@ -15,7 +15,7 @@ node {
     }
     stage('Results') {
         junit( '**/target/surefire-reports/TEST-*.xml')
-        archiveArtifacts 'ping-service/target/*.jar'
+        archiveArtifacts 'target/*.jar'
     }
     stage('Build image') {
         sh "'${mvnHome}/bin/mvn'  -Ddocker.image.prefix=665971472586.dkr.ecr.us-east-1.amazonaws.com/ostock -Dproject.artifactId=ping-service -Ddocker.image.version=latest dockerfile:build"
